@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div class="icon-bar">
-      <router-link :class="{ 'active': $route.name === 'gaode' }" :to="{ name: 'gaode' }"><i class="fa fa-globe"></i></router-link>
-      <router-link :class="{ 'active': $route.name === 'chart' }" :to="{ name: 'chart' }"><i class="fa fa-line-chart"></i></router-link> 
+      <router-link :class="{ 'active': $route.name === 'gaode' }" :to="{ name: 'gaode', query: { lng: 114.356636, lat: 30.474788 }}"><i class="fa fa-street-view"></i></router-link>
+      <router-link :class="{ 'active': $route.name === 'chart' }" :to="{ name: 'chart', query: { code: 10000, mctype: 'dqhz', type: 'china' }}"><i class="fa fa-globe"></i></router-link> 
     </div>
     <router-view />
     <loading />

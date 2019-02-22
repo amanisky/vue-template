@@ -17,6 +17,11 @@ export default {
       gaodeMap: null
     }
   },
+  computed: {
+    center () {
+      return this.$route.query.lng ? [ this.$route.query.lng, this.$route.query.lat ] : [114.356636, 30.474788]
+    }
+  },
   mounted () {
     lazyAMapApiLoaderInstance.load().then(() => {
       let positions = [
@@ -31,6 +36,7 @@ export default {
         { name: '植保科研楼', position: [114.356977, 30.477473], state: 2 },
         { name: '工程楼', position: [114.359044, 30.473388], state: 1 },
         { name: '昆虫楼', position: [114.35381, 30.472211], state: 0 },
+        { name: '分子楼', position: [114.355162, 30.473299], state: 3 }
       ]
 
       let markers = []
@@ -39,7 +45,7 @@ export default {
         // 是否监控地图容器尺寸变化
         resizeEnable: true,
         // 地图中心点坐标值（经度、纬度）
-        center: [114.356636, 30.474788],
+        center: this.center,
         // 地图显示的缩放级别（3-18）
         zoom: 16,
         // 地图效果
@@ -136,16 +142,16 @@ export default {
 
       clusterer.addMarkers(markers)
       
-      this.gaodeMap.addControl(new AMap.Scale())
-      this.gaodeMap.addControl(new AMap.ToolBar({ offset: new AMap.Pixel(10, 81) }))
+      this.gaodeMap.addControl(new AMap.Scale({ offset: new AMap.Pixel(10, 10) }))
+      this.gaodeMap.addControl(new AMap.ToolBar())
 
       this.gaodeMap.on('zoomchange', () => {
         infoWindow.close()
       })
 
-      this.gaodeMap.on('click', function(e) {
-        // console.log(e.lnglat.getLng() + ', ' + e.lnglat.getLat())
-      })
+      // this.gaodeMap.on('click', function(e) {
+      //   console.log(e.lnglat.getLng() + ', ' + e.lnglat.getLat())
+      // })
     })
   }
 }
@@ -154,6 +160,8 @@ export default {
 <style scoped>
 .gaode {
   height: 100vh;
+  padding-top: 71px;
+  box-sizing: border-box;
 }
 
 .amapContainer {

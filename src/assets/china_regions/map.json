@@ -1,0 +1,107 @@
+{
+	"100000": {
+		"id": 100000,
+		"name": "中国",
+		"pinyin": "china",
+		"type": "china",
+		"map": "map_regions/china.json"
+	},
+	"420000": {
+		"id": 420000,
+		"name": "湖北",
+		"pinyin": "hubei",
+		"type": "province",
+		"map": "map_regions/province/hubei.json"
+	},
+	"420100": {
+		"id": 420100,
+		"name": "武汉市",
+		"pinyin": "wuhan",
+		"type": "city",
+		"map": "map_regions/city/hubei/wuhan.json"
+	},
+	"420200": {
+		"id": 420200,
+		"name": "黄石市",
+		"pinyin": "huangshi",
+		"type": "city",
+		"map": "map_regions/city/hubei/huangshi.json"
+	},
+	"420300": {
+		"id": 420300,
+		"name": "十堰市",
+		"pinyin": "shiyan",
+		"type": "city",
+		"map": "map_regions/city/hubei/shiyan.json"
+	},
+	"420500": {
+		"id": 420500,
+		"name": "宜昌市",
+		"pinyin": "yichang",
+		"type": "city",
+		"map": "map_regions/city/hubei/yichang.json"
+	},
+	"420600": {
+		"id": 420600,
+		"name": "襄阳市",
+		"pinyin": "xiangyang",
+		"type": "city",
+		"map": "map_regions/city/hubei/xiangyang.json"
+	},
+	"420700": {
+		"id": 420700,
+		"name": "鄂州市",
+		"pinyin": "ezhou",
+		"type": "city",
+		"map": "map_regions/city/hubei/ezhou.json"
+	},
+	"420800": {
+		"id": 420800,
+		"name": "荆门市",
+		"pinyin": "jingmen",
+		"type": "city",
+		"map": "map_regions/city/hubei/jingmen.json"
+	},
+	"420900": {
+		"id": 420900,
+		"name": "孝感市",
+		"pinyin": "xiaogan",
+		"type": "city",
+		"map": "map_regions/city/hubei/xiaogan.json"
+	},
+	"421000": {
+		"id": 421000,
+		"name": "荆州市",
+		"pinyin": "jingzhou",
+		"type": "city",
+		"map": "map_regions/city/hubei/jingzhou.json"
+	},
+	"421100": {
+		"id": 421100,
+		"name": "黄冈市",
+		"pinyin": "huanggang",
+		"type": "city",
+		"map": "map_regions/city/hubei/huanggang.json"
+	},
+	"421200": {
+		"id": 421200,
+		"name": "咸宁市",
+		"pinyin": "xianning",
+		"type": "city",
+		"map": "map_regions/city/hubei/xianning.json"
+	},
+	"421300": {
+		"id": 421300,
+		"name": "随州市",
+		"pinyin": "suizhou",
+		"type": "city",
+		"map": "map_regions/city/hubei/suizhou.json"
+	},
+	"422800": {
+		"id": 422800,
+		"name": "恩施土家族苗族自治州",
+		"pinyin": "enshi",
+		"type": "city",
+		"map": "map_regions/city/hubei/enshi.json"
+	}
+}

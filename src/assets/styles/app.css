@@ -5,3 +5,7 @@ body {
 .amap-info-contentContainer .amap-info-close {
   display: none;
 }
+
+.amap-scale-text {
+  color: #fff;
+}
