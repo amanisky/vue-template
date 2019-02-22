@@ -1,4 +1,5 @@
 import '../assets/styles/app.css'
+import ECharts from 'vue-echarts'
 import VueAMap from 'vue-amap'
 import Loading from '@/components/loading'
 
@@ -16,6 +17,7 @@ export default {
     
     Vue.component(Loading.name, Loading)
 
+    Vue.component('v-chart', ECharts)
     Vue.use(VueAMap)
 
     VueAMap.initAMapApiLoader({

@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard">
+  <div class="gaode">
     <div class="amapContainer" ref="amapContainer"></div>
   </div>
 </template>
@@ -10,9 +10,10 @@ import red from '@/assets/images/red.gif'
 import orange from '@/assets/images/orange.gif'
 import yellow from '@/assets/images/yellow.gif'
 export default {
-  name: 'dashboard',
+  name: 'gaode',
   data () {
     return {
+      // 高德地图
       gaodeMap: null
     }
   },
@@ -23,7 +24,7 @@ export default {
         { name: '食科楼', position: [114.357296, 30.473323], state: 1 },
         { name: '水产楼', position: [114.357292, 30.472732], state: 3 },
         { name: '图书馆', position: [114.357328, 30.471589], state: 0 },
-        { name: '学生事务大楼', position: [114.362728, 30.473219], state: 0 },
+        { name: '学生综合服务大楼', position: [114.362728, 30.473219], state: 0 },
         { name: '作物楼', position: [114.363842, 30.477475], state: 3 },
         { name: '真菌楼', position: [114.359925, 30.477259], state: 0 },
         { name: '求实楼', position: [114.358641, 30.472209], state: 1 },
@@ -44,7 +45,7 @@ export default {
         // 地图效果
         viewMode: '3D',
         // 地图俯仰角度（0-83）
-        pitch: 70,
+        pitch: 40,
         // 地图旋转角度
         // rotation: 90,
         // 地图主题
@@ -134,9 +135,16 @@ export default {
       })
 
       clusterer.addMarkers(markers)
+      
+      this.gaodeMap.addControl(new AMap.Scale())
+      this.gaodeMap.addControl(new AMap.ToolBar({ offset: new AMap.Pixel(10, 81) }))
+
+      this.gaodeMap.on('zoomchange', () => {
+        infoWindow.close()
+      })
 
       this.gaodeMap.on('click', function(e) {
-        console.log(e.lnglat.getLng() + ', ' + e.lnglat.getLat())
+        // console.log(e.lnglat.getLng() + ', ' + e.lnglat.getLat())
       })
     })
   }
@@ -144,7 +152,7 @@ export default {
 </script>
 
 <style scoped>
-.dashboard {
+.gaode {
   height: 100vh;
 }
 

@@ -1,4 +1,6 @@
 # vue-template
++ 高德地图插件
++ Echarts 插件
 
 ## Project setup
 ```

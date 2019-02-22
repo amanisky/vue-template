@@ -17,6 +17,7 @@ const router = new Router({
  * 权限验证
  */
 router.beforeEach((to, from, next) => {
+  store.commit('changeLoadingState', true)
   next()
 })
 
@@ -24,7 +25,7 @@ router.beforeEach((to, from, next) => {
  * 路由完成
  */
 router.afterEach(() => {
-  store.commit('changeLoadingState', false)
+  setTimeout(() => store.commit('changeLoadingState', false), 1000)
 })
 
 export default router
