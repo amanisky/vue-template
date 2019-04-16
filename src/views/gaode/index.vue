@@ -55,7 +55,8 @@ export default {
         // 地图旋转角度
         // rotation: 90,
         // 地图主题
-        mapStyle: "amap://styles/dark"
+        mapStyle: "amap://styles/dark",
+        features: ['bg', 'road', 'building', 'point']
       })
 
       // 信息窗体
@@ -150,6 +151,7 @@ export default {
       })
 
       // this.gaodeMap.on('click', function(e) {
+      //   console.log(e, 90909090)
       //   console.log(e.lnglat.getLng() + ', ' + e.lnglat.getLat())
       // })
     })
@@ -162,6 +164,7 @@ export default {
   height: 100vh;
   padding-top: 71px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .amapContainer {

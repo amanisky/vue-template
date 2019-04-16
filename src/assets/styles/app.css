@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  overflow: hidden;
 }
 
 .amap-info-contentContainer .amap-info-close {
@@ -8,4 +9,8 @@ body {
 
 .amap-scale-text {
   color: #fff;
+}
+
+.amap-sug-result {
+  min-width: 350px !important;
 }
